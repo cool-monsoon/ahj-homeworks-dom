@@ -1,6 +1,6 @@
-import Game from '../Game';
+import Game from '../game';
 
-test('testing  new instance of class Game creation', () => {
+test('testing new instance of class Game creation', () => {
   const expected = {
     goblin: 'goblin.png',
     areaSize: 4,
@@ -9,4 +9,3 @@ test('testing  new instance of class Game creation', () => {
   const result = new Game('goblin.png', 4);
   expect(result).toEqual(expected);
 });
-

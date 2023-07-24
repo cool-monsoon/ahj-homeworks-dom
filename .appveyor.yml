@@ -3,6 +3,7 @@ stack: node 16
 branches:
   only:
     - main
+    - gh-pages
 cache: node_modules
 install:
   - npm install

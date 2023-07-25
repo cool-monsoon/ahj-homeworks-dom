@@ -6,6 +6,7 @@ export default class Game {
 
   createArea() {
     const size = this.areaSize;
+    const body = document.querySelector('body');
     const area = document.createElement('div');
     for (let i = 0; i < size ** 2; i += 1) {
       const cell = document.createElement('div');
@@ -13,7 +14,7 @@ export default class Game {
       area.append(cell);
     }
     area.className = 'area_container';
-    return area;
+    body.insertAdjacentHTML('afterbegin', area);
   }
 
   randomPosition(min, max) {

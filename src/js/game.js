@@ -10,7 +10,6 @@ export default class Game {
     for (let i = 0; i < size ** 2; i += 1) {
       const cell = document.createElement('div');
       cell.className = 'cell';
-      cell.setAttribute('id', i);
       area.append(cell);
     }
     area.className = 'area_container';
@@ -33,7 +32,8 @@ export default class Game {
     const min = 0;
     const max = this.areaSize ** 2;
     const i = this.randomPosition(min, max);
-    const cell = document.getElementById(i);
+    const cells = [document.querySelectorAll('.cell')];
+    const cell = cells[i];
     cell.append(img);
   }
 

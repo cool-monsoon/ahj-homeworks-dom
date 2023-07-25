@@ -32,7 +32,7 @@ export default class Game {
     const min = 0;
     const max = this.areaSize ** 2;
     const i = this.randomPosition(min, max);
-    const cells = [document.querySelectorAll('.cell')];
+    const cells = document.querySelectorAll('.cell');
     const cell = cells[i];
     cell.append(img);
   }

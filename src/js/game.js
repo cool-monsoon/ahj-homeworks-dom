@@ -12,7 +12,7 @@ export default class Game {
 
     for (let i = 0; i < size ** 2; i += 1) {
       const cell = '<div class="cell"></div>';
-      area.insertAdjacentHTMLd('beforeend', cell);
+      area.insertAdjacentHTML('beforeend', cell);
     }
   }
 

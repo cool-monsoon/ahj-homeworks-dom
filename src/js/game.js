@@ -6,14 +6,14 @@ export default class Game {
 
   createArea() {
     this.name = 'createArea';
-    const body = document.querySelector('body');
+    const body = document.getElementsByTagName('body');
     const area = '<div class="area_container"></div>';
     body.insertAdjacentHTML('afterbegin', area);
   }
 
   createCells() {
     const size = this.areaSize;
-    const gameArea = document.querySelector('area_container');
+    const gameArea = document.querySelector('.area_container');
     for (let i = 0; i < size ** 2; i += 1) {
       const cell = '<div class="cell"></div>';
       gameArea.insertAdjacentHTML('beforeend', cell);

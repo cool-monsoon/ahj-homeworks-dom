@@ -7,14 +7,13 @@ export default class Game {
   createArea() {
     const size = this.areaSize;
     const body = document.querySelector('body');
-    const area = document.createElement('div');
-    for (let i = 0; i < size ** 2; i += 1) {
-      const cell = document.createElement('div');
-      cell.className = 'cell';
-      area.append(cell);
-    }
-    area.className = 'area_container';
+    const area = '<div class="area_container"></div>';
     body.insertAdjacentHTML('afterbegin', area);
+
+    for (let i = 0; i < size ** 2; i += 1) {
+      const cell = '<div class="cell"</div>';
+      area.insertAdjacentHTMLd('beforeend', cell);
+    }
   }
 
   randomPosition(min, max) {

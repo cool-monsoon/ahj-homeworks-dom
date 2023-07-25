@@ -5,14 +5,18 @@ export default class Game {
   }
 
   createArea() {
-    const size = this.areaSize;
+    this.name = 'createArea';
     const body = document.querySelector('body');
     const area = '<div class="area_container"></div>';
     body.insertAdjacentHTML('afterbegin', area);
+  }
 
+  createCells() {
+    const size = this.areaSize;
+    const gameArea = document.querySelector('area_container');
     for (let i = 0; i < size ** 2; i += 1) {
       const cell = '<div class="cell"></div>';
-      area.insertAdjacentHTML('beforeend', cell);
+      gameArea.insertAdjacentHTML('beforeend', cell);
     }
   }
 
@@ -39,6 +43,7 @@ export default class Game {
 
   start() {
     this.createArea();
+    this.createCells();
     const img = this.createGoblin();
 
     setInterval(() => {
